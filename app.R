@@ -3,9 +3,7 @@ library(tidyverse)
 library(plotly)
 library(scales)
 
-setwd(r"(C:\Users\Denton\Documents\.School\ds502)")
-
-ds <- read_csv("datasets/pokemon_ds.csv")
+ds <- read_csv("https://raw.githubusercontent.com/dkunz2024/ds502final/master/pokemon_ds.csv")
 ds <- ds %>% 
   mutate(Type_1 = as.factor(Type_1), 
          Type_2 = as.factor(Type_2), 
@@ -14,7 +12,7 @@ ds <- ds %>%
          Egg_Group_2 = as.factor(Egg_Group_2), 
          Body_Style = as.factor(Body_Style))
 
-types <- read_csv("datasets/pokemon_type_ds.csv")
+types <- read_csv("https://raw.githubusercontent.com/dkunz2024/ds502final/master/pokemon_type_ds.csv")
 types <- types %>% 
   rename("Type 1"=...1)
 types <- types %>% 
